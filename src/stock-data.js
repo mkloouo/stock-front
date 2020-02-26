@@ -1,0 +1,34 @@
+export default [{
+  "symbol": "MSFT",
+  "open": "182.8450",
+  "high": "185.6300",
+  "low": "182.4800",
+  "price": "183.8900",
+  "volume": "33529074",
+  "latest_trading_day": "2020-02-07",
+  "previous_close": "183.6300",
+  "change": "0.2600",
+  "change_percent": "0.1416%"
+}, {
+  "symbol": "AAPL",
+  "open": "322.3700",
+  "high": "323.4000",
+  "low": "318.0000",
+  "price": "320.0300",
+  "volume": "29421012",
+  "latest_trading_day": "2020-02-07",
+  "previous_close": "325.2100",
+  "change": "-5.1800",
+  "change_percent": "-1.5928%"
+}, {
+  "symbol": "GOOG",
+  "open": "1467.3000",
+  "high": "1485.8400",
+  "low": "1466.3500",
+  "price": "1479.2300",
+  "volume": "1172270",
+  "latest_trading_day": "2020-02-07",
+  "previous_close": "1476.2300",
+  "change": "3.0000",
+  "change_percent": "0.2032%"
+}];

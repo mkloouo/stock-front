@@ -1,0 +1,244 @@
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    --main-green-color: #41bf15;
+    --main-red-color: #ff4f46;
+    --main-text-color: #59737c;
+    --white-color: #ffffff;
+    --icons-color: #ababab;
+    --separator-color: #e0e0e0;
+
+    --bold-font: "HelveticaNeueW01-75Bold", sans-serif;
+    --main-font: "HelveticaNeueW01-55Roma", sans-serif;
+    --logo-font: "HelveticaNeueW02-95Blac", sans-serif;
+    --avenir-font: "HelveticaNeueW01-55Roma", sans-serif;
+}
+
+.menu-button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-bar {
+    margin: 30px;
+    margin-bottom: 40px;
+
+    display: flex;
+}
+
+.menu-button {
+    margin-left: 25px;
+}
+
+.menu-button > svg path {
+    stroke: var(--icons-color);
+}
+
+.filter-menu {
+    border-top: 1px solid var(--separator-color);
+    padding: 10px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-group {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+select[class="filter-input"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    padding: 10px;
+}
+
+.filter-input {
+    flex-basis: 360px;
+    height: 55px;
+
+    box-sizing: border-box;
+}
+
+.filter-by-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.stock-list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+
+    padding: 0;
+}
+
+.stock-item {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 44px 30px 29px 30px;
+
+    border-top: 1px solid var(--separator-color);
+}
+
+.stock-item-full-company-name {
+    text-overflow: ellipsis;
+    width: 600px;
+
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.stock-item-numbers {
+    display: flex;
+}
+
+.stock-item-number {
+    margin-left: 24px;
+}
+
+.stock-item-gain {
+    width: 150px;
+}
+
+.title {
+    flex-grow: 1;
+
+    font-family: var(--logo-font);
+    color: var(--main-green-color);
+    font-size: 39px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.active > svg path {
+    stroke: green;
+}
+
+.filter-by-label,
+.filter-input {
+    font-family: var(--main-font);
+    font-size: 26px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #59737c;
+}
+
+.filter-input {
+    border-radius: 10px;
+    border: solid 1px var(--separator-color);
+    background-color: var(--white-color);
+}
+
+.filter-input:focus,
+.apply-button:focus,
+.stock-item-gain:focus {
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, .5);
+}
+
+.apply-button {
+    width: 120px;
+    height: 120px;
+
+    font-family: var(--bold-font);
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--white-color);
+
+    border-radius: 50%;
+    border: solid 1px #247906;
+    background-color: var(--main-green-color);
+}
+
+.apply-button:hover,
+.stock-item-gain:hover {
+    opacity: 0.8
+}
+
+.stock-item-full-company-name {
+    font-family: var(--avenir-font);
+    font-size: 33px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--main-text-color);
+}
+
+.stock-item-price {
+    font-family: var(--main-font);
+    font-size: 30px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--main-text-color);
+}
+
+.stock-item-gain {
+    border-radius: 10px;
+
+    font-family: var(--avenir-font);
+    font-size: 34px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--white-color);
+}
+
+.stock-item-gain-up {
+    background-color: var(--main-green-color);
+}
+
+.stock-item-gain-down {
+    background-color: var(--main-red-color);
+}
